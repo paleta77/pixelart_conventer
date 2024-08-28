@@ -1,9 +1,9 @@
 from PIL import Image
 from numpy import array
-from conversion.block import Block
+from .block import Block
 
 
-class Conventer():
+class Converter:
 
     def __init__(self, image_path, block_size) -> None:
         self.image_path = image_path
