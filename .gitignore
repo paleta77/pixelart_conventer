@@ -131,3 +131,4 @@ dmypy.json
 # My ignored files
 *.png
 *.jpg
+/.idea
