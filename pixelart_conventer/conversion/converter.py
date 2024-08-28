@@ -1,4 +1,5 @@
 from PIL import Image
+from PIL.Image import Palette
 from numpy import array
 from .block import Block
 
@@ -12,7 +13,7 @@ class Converter:
         image = Image.open(path)
         return array(image)
 
-    def convert(self, block_size):
+    def convert(self, block_size, number_of_colors):
         image = self.load_image_as_array(self.image_path)
 
         columns, rows, _ = image.shape
@@ -26,6 +27,6 @@ class Converter:
                 block = Block(
                     image[column_start:column_end, row_start:row_end]
                     )
-                block.set_avarage_color_of_block()
+                block.set_average_color_of_block()
 
-        return Image.fromarray(image, mode="RGB")
+        return Image.fromarray(image, mode="RGB").convert("P", palette=Image.ADAPTIVE, colors=number_of_colors)
