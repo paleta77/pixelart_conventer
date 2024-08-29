@@ -132,3 +132,4 @@ dmypy.json
 *.png
 *.jpg
 /.idea
+./pixelart_converter/database.cnf
