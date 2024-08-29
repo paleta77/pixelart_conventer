@@ -61,6 +61,7 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 /converter/migrations/*
+/pixelart_converter/database.cnf
 
 # Flask stuff:
 instance/
@@ -133,4 +134,3 @@ dmypy.json
 *.png
 *.jpg
 /.idea
-./pixelart_converter/database.cnf
